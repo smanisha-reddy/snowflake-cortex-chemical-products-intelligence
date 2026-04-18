@@ -1,0 +1,29 @@
+# Secrets
+.streamlit/secrets.toml
+.env
+.env.*
+connections.toml
+config.toml
+
+# Snowflake keys
+*.p8
+*.pem
+*.pub
+*.key
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Logs / local files
+*.log
+.DS_Store
+Thumbs.db
+
+# Media / local recordings
+*.mp4
+*.mov

@@ -1,0 +1,9 @@
+[cortex_project]
+account = "YOUR_ACCOUNT"
+user = "YOUR_USERNAME"
+authenticator = "SNOWFLAKE_JWT"
+private_key_file = "/path/to/private_key.p8"
+database = "YOUR_DATABASE"
+schema = "YOUR_SCHEMA"
+warehouse = "YOUR_WAREHOUSE"
+role = "YOUR_ROLE"
