@@ -3,7 +3,9 @@
 .env
 .env.*
 connections.toml
-config.toml
+
+# Keep Streamlit UI config
+!.streamlit/config.toml
 
 # Snowflake keys
 *.p8
@@ -27,3 +29,7 @@ Thumbs.db
 # Media / local recordings
 *.mp4
 *.mov
+
+# Local-only files
+data/
+from cryptography.hazmat.py
