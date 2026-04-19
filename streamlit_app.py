@@ -60,12 +60,17 @@ def get_cortex_analyst_response(conn, question: str, chat_history: list[dict]) -
 def parse_analyst_response(response: dict) -> dict:
     """Extract text, SQL, and result data from the Cortex Analyst response."""
     message = response.get("message", {})
+    if isinstance(message, str):
+        return {"text": message, "sql": None, "raw_content": [message]}
     content_items = message.get("content", [])
 
     text_parts = []
     sql = None
 
     for item in content_items:
+        if isinstance(item, str):
+            text_parts.append(item)
+            continue
         if item.get("type") == "text":
             text_parts.append(item["text"])
         elif item.get("type") == "sql":
